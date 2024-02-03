@@ -1,0 +1,41 @@
+.dot {
+     width: 30px;
+     height: 30px;
+     border-radius: 50%;
+     margin: 10px 0;
+     position: relative;
+     background-color: var(--background-color);
+}
+:root {
+     --background-color: white;
+     --timing: 2s;
+}
+.dot::after {
+     content: "";
+     width: 30px;
+     height: 30px;
+     border-radius: 50%;
+     background-color: white;
+     position: absolute;
+     inset: 0;
+     animation: mymove infinite;
+     animation-duration: var(--timing);
+     border: 1px solid black;
+}
+
+@keyframes mymove {
+     from {
+          left: 0px;
+          top: 0px;
+     }
+     to {
+          left: 10px;
+          top: -10px;
+     }
+}
+.containerDots {
+     display: grid;
+     grid-template: repeat(8, 1fr) / repeat(8, 1fr);
+     width: 500px;
+     margin: 0 auto;
+}
