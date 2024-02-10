@@ -10,6 +10,6 @@ for (let i = 0; i < 64; i++) {
           const arr = ["#7f7fe6", "#5f5f68", "#d2d2e9", "#e5697a"];
           const randomValue = arr[Math.floor(Math.random() * arr.length)];
           dot.style.setProperty("--background-color", randomValue);
-     }, 2000);
+     }, 1000);
      containerDots.appendChild(dot);
 }
